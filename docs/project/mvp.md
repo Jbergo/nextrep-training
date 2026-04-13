@@ -33,10 +33,16 @@ NextRep Training es una aplicación web orientada a la venta de servicios de ent
 
 - ID plan
 - Nombre
-- Descripción
-- Precio
-- Duración
+- Tipo
 - Nivel requerido
+- Objetivo
+- Duración (semanas)
+- Frecuencia (sesiones/semana)
+- Duración (sesión)
+- Personalización
+- Descripción
+- Para quien
+- Precio
 - Activo
 
 ### Solicitud
