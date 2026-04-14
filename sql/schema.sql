@@ -40,7 +40,7 @@ create table
     );
 
 create table
-    solicitud (
+    solicitudes (
         id_solicitud int auto_increment primary key,
         id_cliente int not null,
         id_plan int not null,
