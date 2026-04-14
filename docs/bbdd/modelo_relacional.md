@@ -26,7 +26,7 @@ Almacena la información básica de los clientes que consultan o contratan los s
 - `email` VARCHAR(100) NOT NULL UNIQUE
 - `telefono` VARCHAR(20)
 - `nivel` VARCHAR(30) NOT NULL
-- `objetivo` VARCHAR(50) NOT NULL
+- `objetivo` VARCHAR(100) NOT NULL
 - `fecha_alta` DATE NOT NULL
 
 **Restricciones principales:**
@@ -48,29 +48,30 @@ Recoge la información de los planes de entrenamiento que la empresa ofrece a su
 **Campos propuestos:**
 - `id_plan` INT AUTO_INCREMENT PRIMARY KEY
 - `nombre` VARCHAR(80) NOT NULL
-- `tipo` VARCHAR(50) NOT NULL
-- `nivel_requerido` VARCHAR(30) NOT NULL
+- `tipo` VARCHAR(100) NOT NULL
+- `nivel_requerido` ENUM('Principiante', 'Intermedio', 'Avanzado') NOT NULL
 - `objetivo` VARCHAR(100) NOT NULL
 - `duracion_semanas` INT NOT NULL
 - `frecuencia_sesiones` INT NOT NULL
 - `duracion_sesion` INT NOT NULL
-- `personalizacion` VARCHAR(30) NOT NULL
-- `descripcion` TEXT NOT NULL
-- `para_quien` TEXT NOT NULL
+- `personalizacion` ENUM('Baja', 'Media', 'Alta') NOT NULL
+- `descripcion` TEXT
+- `para_quien` TEXT
 - `precio` DECIMAL(8,2) NOT NULL
 - `activo` BOOLEAN NOT NULL
 
 **Restricciones principales:**
 - El identificador del plan debe ser único.
-- Los campos `nombre`, `tipo`, `nivel_requerido`, `objetivo`, `duracion_semanas`, `frecuencia_sesiones`, `duracion_sesion`, `personalizacion`, `descripcion`, `para_quien`, `precio` y `activo` son obligatorios.
+- Los campos `nombre`, `tipo`, `nivel_requerido`, `objetivo`, `duracion_semanas`, `frecuencia_sesiones`, `duracion_sesion`, `personalizacion`, `precio` y `activo` son obligatorios.
 - El `precio` debe almacenarse con formato decimal.
-- La duración del plan en semanas debe ser mayor que 0.
-- La frecuencia de sesiones por semana debe ser mayor que 0.
-- La duración de cada sesión debe almacenarse en minutos y ser mayor que 0.
+- La `duración` del plan en semanas debe ser mayor que 0.
+- La `frecuencia` de sesiones por semana debe ser mayor que 0.
+- La `duración` de cada sesión debe almacenarse en minutos y ser mayor que 0.
 - El campo `activo` permite distinguir entre planes disponibles y planes desactivados.
-- El campo `nivel_requerido` debe reflejar el nivel mínimo recomendado para contratar el plan.
-- El campo `personalizacion` permite indicar si el servicio es bajo, medio, alto, semipersonalizado o personalizado.
+- El campo `nivel_requerido` debe reflejar el nivel mínimo recomendado para contratar el plan (principiante, intermedio, avanzado).
+- El campo `personalizacion` permite indicar si el servicio es bajo, medio, alto.
 - El campo `para_quien` sirve para describir el perfil de cliente al que va dirigido el plan.
+- Los campos `descripcion` y `para_quien` son opcionales.
 - Conviene limitar algunos valores de negocio mediante `CHECK` o validación en aplicación, por ejemplo en `nivel_requerido` y `personalizacion`, ya que en tu catálogo los planes se diferencian precisamente por tipo, nivel, objetivo, duración, frecuencia, personalización y precio.
 - Esta estructura también encaja con el MVP definido para NextRep Training, donde los planes forman parte de la base de datos principal del negocio y deben ser gestionables desde la app Java.
 
@@ -116,7 +117,7 @@ Registra las solicitudes de contratación realizadas por los clientes sobre los 
 - `id_plan` INT NOT NULL
 - `id_admin` INT
 - `fecha_solicitud` DATE NOT NULL
-- `estado` ENUM NOT NULL
+- `estado` ENUM('Pendiente', 'Aprobada', 'Cancelada') NOT NULL
 - `comentarios_cliente` TEXT
 - `notas_internas` TEXT
 
@@ -124,7 +125,7 @@ Registra las solicitudes de contratación realizadas por los clientes sobre los 
 - Cada solicitud debe estar asociada a un cliente existente.
 - Cada solicitud debe estar asociada a un plan existente.
 - El campo `id_admin` puede quedar nulo en una primera fase si la solicitud aún no ha sido revisada.
-- El campo `estado` es obligatorio para indicar la situación de la solicitud.
+- El campo `estado` es obligatorio para indicar la situación de la solicitud (pendiente, aprobada o cancelada). Por defecto es pendiente.
 - Los campos `comentarios_cliente` y `notas_internas` son opcionales.
 
 ---
