@@ -6,7 +6,7 @@
 2. [Estructura del proyecto Java](#2-estructura-del-proyecto-java)
 3. [Descripción de capas](#3-descripción-de-capas)
 
-   3.1. [Paquete `config`](#31-paquete-config)
+   3.1. [Paquete `database`](#31-paquete-database)
 
    3.2. [Paquete `model`](#32-paquete-model)
 
@@ -14,7 +14,7 @@
 
    3.4. [Capa Service](#34-capa-service)
 
-   3.5. [Capa UI](#35-capa-ui)
+   3.5. [Capa view](#35-capa-view)
 
    3.6. [Clase `Main`](#36-clase-main)
    
@@ -39,13 +39,15 @@ Este enfoque permite:
 - Organizar el proyecto de forma profesional.
 - Facilitar la validación, el mantenimiento y futuras ampliaciones.
 
+---
+
 ## 2. Estructura del proyecto Java
 
 La estructura prevista de la aplicación es la siguiente:
 
 ```text
 src/main/java/
-├── config/
+├── database/
 │   └── DBConnection.java
 ├── model/
 │   ├── Cliente.java
@@ -65,7 +67,7 @@ src/main/java/
 │   ├── PlanService.java
 │   ├── SolicitudService.java
 │   └── AdministradorService.java
-├── ui/
+├── view/
 │   ├── MainMenu.java
 │   ├── ClienteMenu.java
 │   ├── PlanMenu.java
@@ -77,7 +79,7 @@ src/main/java/
 
 ## 3. Descripción de capas
 
-### 3.1. Paquete `config`
+### 3.1. Paquete `database`
 
 Contiene la configuración de acceso a base de datos.
 
@@ -331,7 +333,7 @@ Métodos representativos:
 - `listarAdmin()`
 - `obtenerAdminPorId(int idAdmin)`
 
-### 3.5. Capa UI
+### 3.5. Capa view
 
 El paquete `ui` contiene los menús de consola y la interacción con el usuario.
 
