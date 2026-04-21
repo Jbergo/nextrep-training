@@ -33,7 +33,7 @@ Frente a ese problema, la empresa ofrece una solución digital clara y accesible
 - **Java**, como lenguaje principal para la lógica de la aplicación.
 - **JDBC**, para la conexión entre la aplicación Java y la base de datos.
 - **SQL**, para la creación, consulta y gestión de los datos.
-- **MySQL** o **MariaDB**, como sistema gestor de base de datos relacional.
+- **MySQL**, como sistema gestor de base de datos relacional.
 - **Git y GitHub**, para el control de versiones y la organización del repositorio del proyecto.
 
 ## Instrucciones básicas de instalación/ejecución

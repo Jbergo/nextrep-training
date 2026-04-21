@@ -1,5 +1,24 @@
 # Arquitectura de la aplicación Java — NextRep Training
 
+## Índice
+
+1. [Enfoque técnico](#1-enfoque-técnico)
+2. [Estructura del proyecto Java](#2-estructura-del-proyecto-java)
+3. [Descripción de capas](#3-descripción-de-capas)
+
+   3.1. [Paquete `config`](#31-paquete-config)
+
+   3.2. [Paquete `model`](#32-paquete-model)
+
+   3.3. [Capa DAO](#33-capa-dao)
+
+   3.4. [Capa Service](#34-capa-service)
+
+   3.5. [Capa UI](#35-capa-ui)
+
+   3.6. [Clase `Main`](#36-clase-main)
+   
+4. [Flujo funcional resumido](#4-flujo-funcional-resumido)
 
 ---
 

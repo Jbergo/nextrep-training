@@ -1,5 +1,19 @@
 # Módulo de Programación
 
+## Índice
+
+1. [Descripción del módulo](#1-descripción-del-módulo)
+2. [Objetivo del módulo](#2-objetivo-del-módulo)
+3. [Qué hace la aplicación](#3-qué-hace-la-aplicación)
+4. [Entidades gestionadas](#4-entidades-gestionadas)
+5. [Arquitectura de la aplicación](#5-arquitectura-de-la-aplicación)
+6. [Ejecución de la aplicación](#6-ejecución-de-la-aplicación)
+7. [Operaciones principales del módulo](#7-operaciones-principales-del-módulo)
+8. [Uso de JDBC en el proyecto](#8-uso-de-jdbc-en-el-proyecto)
+9. [Relación con la base de datos](#9-relación-con-la-base-de-datos)
+
+---
+
 ## 1. Descripción del módulo
 
 Este módulo corresponde a la parte de **Programación** del Proyecto Intermodular de **NextRep Training**, una empresa ficticia dedicada a la venta de servicios de entrenamiento online.
