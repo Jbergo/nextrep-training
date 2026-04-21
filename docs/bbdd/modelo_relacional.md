@@ -1,6 +1,24 @@
 # Explicación del modelo relacional
 
-## Tablas del sistema
+## Índice
+
+1. [Tablas del sistema](#1-tablas-del-sistema)
+
+   1.1. [Tabla `cliente`](#11-tabla-cliente)
+
+   1.2. [Tabla `plan`](#12-tabla-plan)
+
+   1.3. [Tabla `administrador`](#13-tabla-administrador)
+
+   1.4. [Tabla `solicitud`](#14-tabla-solicitud)
+
+2. [Relaciones entre tablas](#2-relaciones-entre-tablas)
+
+3. [Restricciones principales del modelo](#3-restricciones-principales-del-modelo)
+
+---
+
+## 1. Tablas del sistema
 
 El modelo relacional de NextRep Training se compone de cuatro tablas principales:
 
@@ -11,7 +29,7 @@ El modelo relacional de NextRep Training se compone de cuatro tablas principales
 
 ---
 
-## Tabla `cliente`
+### 1.1. Tabla `cliente`
 
 **Finalidad:**  
 Almacena la información básica de los clientes que consultan o contratan los servicios de entrenamiento online.
@@ -35,9 +53,7 @@ Almacena la información básica de los clientes que consultan o contratan los s
 - Los campos `nombre`, `apellidos`, `email`, `nivel`, `objetivo` y `fecha_alta` son obligatorios.
 - El campo `telefono` puede quedar opcional en el MVP.
 
----
-
-## Tabla `plan`
+### 1.2. Tabla `plan`
 
 **Finalidad:**  
 Recoge la información de los planes de entrenamiento que la empresa ofrece a sus clientes.
@@ -75,9 +91,7 @@ Recoge la información de los planes de entrenamiento que la empresa ofrece a su
 - Conviene limitar algunos valores de negocio mediante `CHECK` o validación en aplicación, por ejemplo en `nivel_requerido` y `personalizacion`, ya que en tu catálogo los planes se diferencian precisamente por tipo, nivel, objetivo, duración, frecuencia, personalización y precio.
 - Esta estructura también encaja con el MVP definido para NextRep Training, donde los planes forman parte de la base de datos principal del negocio y deben ser gestionables desde la app Java.
 
----
-
-## Tabla `administrador`
+### 1.3. Tabla `administrador`
 
 **Finalidad:**  
 Almacena la información del perfil interno que gestiona las solicitudes realizadas por los clientes.
@@ -96,9 +110,7 @@ Almacena la información del perfil interno que gestiona las solicitudes realiza
 - El correo electrónico no puede repetirse.
 - Los campos `nombre`, `apellidos` y `email` son obligatorios.
 
----
-
-## Tabla `solicitud`
+### 1.4. Tabla `solicitud`
 
 **Finalidad:**  
 Registra las solicitudes de contratación realizadas por los clientes sobre los distintos planes ofrecidos por la empresa.
@@ -130,7 +142,7 @@ Registra las solicitudes de contratación realizadas por los clientes sobre los 
 
 ---
 
-## Relaciones entre tablas
+## 2. Relaciones entre tablas
 
 A partir del diagrama E/R y del funcionamiento del negocio, las relaciones del modelo relacional quedan definidas de la siguiente manera:
 
@@ -142,7 +154,7 @@ Esto se implementa mediante FK en la tabla `solicitudes`, ya que es la tabla que
 
 ---
 
-## Restricciones principales del modelo
+## 3. Restricciones principales del modelo
 
 Las restricciones más relevantes del modelo relacional son las siguientes:
 

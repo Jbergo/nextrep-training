@@ -1,6 +1,34 @@
 # Módulo de Bases de Datos
 
-## Descripción del módulo
+## Índice
+
+1. [Descripción del módulo](#1-descripción-del-módulo)
+2. [Contexto del proyecto](#2-contexto-del-proyecto)
+3. [Objetivo de la base de datos](#3-objetivo-de-la-base-de-datos)
+4. [Estructura de archivos del módulo](#4-estructura-de-archivos-del-módulo)
+5. [Diagrama E/R](#5-diagrama-er)
+6. [Modelo relacional](#6-modelo-relacional)
+7. [Scripts SQL incluidos](#7-scripts-sql-incluidos)
+
+   7.1. [`sql/schema.sql`](#71-sqlschemasql)
+
+   7.2. [`sql/seed.sql`](#72-sqlseedsql)
+
+   7.3. [`sql/queries.sql`](#73-sqlqueriessql)
+
+8. [Consultas del proyecto](#8-consultas-del-proyecto)
+
+9. [Relación con la web y con la app Java](#9-relación-con-la-web-y-con-la-app-java)
+
+   9.1. [Relación con la web](#91-relación-con-la-web)
+
+   9.2. [Relación con la base de datos](#92-relación-con-la-base-de-datos)
+   
+   9.3. [Relación con la app Java](#93-relación-con-la-app-java)
+
+---
+
+## 1. Descripción del módulo
 
 Este directorio documenta el trabajo realizado para el módulo de **Bases de Datos (0484)** dentro del Proyecto Intermodular de 1.º DAW.
 
@@ -10,7 +38,7 @@ La finalidad de esta parte no es únicamente crear tablas, sino demostrar un pro
 
 ---
 
-## Contexto del proyecto
+## 2. Contexto del proyecto
 
 **NextRep Training** es una empresa ficticia de servicios de entrenamiento online. Su portal web está orientado a presentar la empresa, mostrar un catálogo de planes de entrenamiento y permitir que los usuarios soliciten la contratación de un servicio.
 
@@ -23,7 +51,7 @@ Desde el módulo de bases de datos, el proyecto modela la información que la em
 
 ---
 
-## Objetivo de la base de datos
+## 3. Objetivo de la base de datos
 
 El objetivo de esta base de datos es representar de forma estructurada el funcionamiento interno de NextRep Training mediante un modelo relacional que permita:
 
@@ -36,7 +64,7 @@ El objetivo de esta base de datos es representar de forma estructurada el funcio
 
 ---
 
-## Estructura de archivos del módulo
+## 4. Estructura de archivos del módulo
 
 ```text
 docs/
@@ -58,7 +86,7 @@ sql/
 
 ---
 
-## Diagrama E/R
+## 5. Diagrama E/R
 
 El diagrama Entidad–Relación del proyecto representa visualmente las entidades, atributos, claves y relaciones descritas anteriormente.
 
@@ -78,7 +106,7 @@ Archivos asociados:
 
 ---
 
-## Modelo relacional
+## 6. Modelo relacional
 
 A partir del diagrama E/R se obtiene el siguiente modelo relacional general:
 
@@ -98,9 +126,9 @@ Archivos asociados:
 
 ---
 
-## Scripts SQL incluidos
+## 7. Scripts SQL incluidos
 
-### `sql/schema.sql`
+### 7.1. `sql/schema.sql`
 Script encargado de:
 - Crear la base de datos.
 - Crear las tablas.
@@ -108,11 +136,11 @@ Script encargado de:
 - Definir claves foráneas.
 - Aplicar restricciones básicas.
 
-### `sql/seed.sql`
+### 7.2. `sql/seed.sql`
 Script encargado de:
 - Insertar datos de ejemplo.
 
-### `sql/queries.sql`
+### 7.3. `sql/queries.sql`
 Script encargado de:
 - Incluir consultas útiles y realistas.
 - Comprobar que las relaciones funcionan.
@@ -120,7 +148,7 @@ Script encargado de:
 
 ---
 
-## Consultas del proyecto
+## 8. Consultas del proyecto
 
 Las consultas incluidas en este módulo están pensadas para responder a necesidades reales del negocio. Entre ellas se incluyen, como mínimo:
 
@@ -137,24 +165,24 @@ Las consultas incluidas en este módulo están pensadas para responder a necesid
 
 ---
 
-## Relación con la web y con la app Java
+## 9. Relación con la web y con la app Java
 
 Esta base de datos está alineada con el resto del proyecto intermodular:
 
-### Relación con la web
+### 9.1. Relación con la web
 La web corporativa muestra la parte visible de NextRep Training:
 - Presentación de la empresa.
 - Catálogo de servicios.
 - Información de los planes.
 
-### Relación con la base de datos
+### 9.2. Relación con la base de datos
 La base de datos representa cómo funciona internamente el negocio:
 - Clientes.
 - Planes.
 - Solicitudes.
 - Gestión administrativa.
 
-### Relación con la app Java
+### 9.3. Relación con la app Java
 La aplicación Java por consola usa esta base de datos mediante JDBC para realizar operaciones reales como:
 - Listar planes.
 - Crear clientes.
