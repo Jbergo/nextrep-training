@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.0 Chrome/140.0.7339.249 Electron/38.7.2 Safari/537.36" version="29.3.0">
   <diagram name="Página-1" id="MQ7CfonJoHXOvtSbMeW7">
-    <mxGraphModel dx="1569" dy="2408" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1847" dy="2408" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -385,7 +385,7 @@
         <mxCell id="fRZRpap1HlZArI4Ek3ob-28" parent="oRFrIUeBiwJYp7Q6fAZe-98" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#000000;swimlaneFillColor=#DAE8FC;" value="ClienteService" vertex="1">
           <mxGeometry height="254" width="176" x="514" y="54" as="geometry" />
         </mxCell>
-        <mxCell id="fRZRpap1HlZArI4Ek3ob-29" parent="fRZRpap1HlZArI4Ek3ob-28" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#333333;" value="+ clienteDao: ClienteDAO" vertex="1">
+        <mxCell id="fRZRpap1HlZArI4Ek3ob-29" parent="fRZRpap1HlZArI4Ek3ob-28" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#333333;" value="- clienteDao: ClienteDAO" vertex="1">
           <mxGeometry height="26" width="176" y="26" as="geometry" />
         </mxCell>
         <mxCell id="fRZRpap1HlZArI4Ek3ob-30" parent="fRZRpap1HlZArI4Ek3ob-28" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
@@ -409,7 +409,7 @@
         <mxCell id="fRZRpap1HlZArI4Ek3ob-37" parent="oRFrIUeBiwJYp7Q6fAZe-98" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#000000;swimlaneFillColor=#DAE8FC;" value="PlanService" vertex="1">
           <mxGeometry height="124" width="212" x="257" y="54" as="geometry" />
         </mxCell>
-        <mxCell id="fRZRpap1HlZArI4Ek3ob-61" parent="fRZRpap1HlZArI4Ek3ob-37" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#333333;" value="+ planDao: PlanDAO" vertex="1">
+        <mxCell id="fRZRpap1HlZArI4Ek3ob-61" parent="fRZRpap1HlZArI4Ek3ob-37" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#333333;" value="- planDao: PlanDAO" vertex="1">
           <mxGeometry height="26" width="212" y="26" as="geometry" />
         </mxCell>
         <mxCell id="fRZRpap1HlZArI4Ek3ob-63" parent="fRZRpap1HlZArI4Ek3ob-37" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
@@ -424,7 +424,7 @@
         <mxCell id="fRZRpap1HlZArI4Ek3ob-52" parent="oRFrIUeBiwJYp7Q6fAZe-98" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#000000;swimlaneFillColor=#DAE8FC;" value="AdministradorService" vertex="1">
           <mxGeometry height="86" width="212" x="23" y="54" as="geometry" />
         </mxCell>
-        <mxCell id="fRZRpap1HlZArI4Ek3ob-64" parent="fRZRpap1HlZArI4Ek3ob-52" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#333333;" value="+ adminDao: AdministradorDAO" vertex="1">
+        <mxCell id="fRZRpap1HlZArI4Ek3ob-64" parent="fRZRpap1HlZArI4Ek3ob-52" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#333333;" value="- adminDao: AdministradorDAO" vertex="1">
           <mxGeometry height="26" width="212" y="26" as="geometry" />
         </mxCell>
         <mxCell id="fRZRpap1HlZArI4Ek3ob-66" parent="fRZRpap1HlZArI4Ek3ob-52" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" value="" vertex="1">
@@ -436,7 +436,7 @@
         <mxCell id="fRZRpap1HlZArI4Ek3ob-54" parent="oRFrIUeBiwJYp7Q6fAZe-98" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#000000;swimlaneFillColor=#DAE8FC;swimlaneLine=1;" value="SolicitudService" vertex="1">
           <mxGeometry height="300" width="212" x="751" y="54" as="geometry" />
         </mxCell>
-        <mxCell id="fRZRpap1HlZArI4Ek3ob-67" parent="fRZRpap1HlZArI4Ek3ob-54" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#333333;" value="+ solicitudDao: SolicitudDAO" vertex="1">
+        <mxCell id="fRZRpap1HlZArI4Ek3ob-67" parent="fRZRpap1HlZArI4Ek3ob-54" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#333333;" value="- solicitudDao: SolicitudDAO" vertex="1">
           <mxGeometry height="26" width="212" y="26" as="geometry" />
         </mxCell>
         <mxCell id="fRZRpap1HlZArI4Ek3ob-69" parent="fRZRpap1HlZArI4Ek3ob-54" style="line;strokeWidth=1;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;shadow=0;labelBackgroundColor=none;labelBorderColor=none;fillColor=none;" value="" vertex="1">
@@ -451,10 +451,10 @@
         <mxCell id="fRZRpap1HlZArI4Ek3ob-57" parent="fRZRpap1HlZArI4Ek3ob-54" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#333333;" value="+ buscarPorCliente(cliente: Cliente): List&amp;lt;Solicitud&amp;gt;" vertex="1">
           <mxGeometry height="43" width="212" y="128" as="geometry" />
         </mxCell>
-        <mxCell id="fRZRpap1HlZArI4Ek3ob-58" parent="fRZRpap1HlZArI4Ek3ob-54" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#333333;" value="+ nuevaSolicitud(cliente: Cliente): boolean" vertex="1">
+        <mxCell id="fRZRpap1HlZArI4Ek3ob-58" parent="fRZRpap1HlZArI4Ek3ob-54" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#333333;" value="+ nuevaSolicitud(solicitud: Solicitud): boolean" vertex="1">
           <mxGeometry height="43" width="212" y="171" as="geometry" />
         </mxCell>
-        <mxCell id="fRZRpap1HlZArI4Ek3ob-59" parent="fRZRpap1HlZArI4Ek3ob-54" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#333333;" value="+ modificarSolicitud(cliente: Cliente): boolean" vertex="1">
+        <mxCell id="fRZRpap1HlZArI4Ek3ob-59" parent="fRZRpap1HlZArI4Ek3ob-54" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#333333;" value="+ modificarSolicitud(solicitud: Solicitud): boolean" vertex="1">
           <mxGeometry height="43" width="212" y="214" as="geometry" />
         </mxCell>
         <mxCell id="fRZRpap1HlZArI4Ek3ob-60" parent="fRZRpap1HlZArI4Ek3ob-54" style="text;strokeColor=#666666;fillColor=#f5f5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontColor=#333333;" value="+ eliminarSolicitud(cliente: Cliente): boolean" vertex="1">
