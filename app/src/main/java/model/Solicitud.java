@@ -28,4 +28,14 @@ public class Solicitud {
         this.comentariosCliente = comentariosCliente;
         this.notasInternas = notasInternas;
     }
+
+    public Solicitud(Cliente cliente, Plan plan, LocalDate fechaSolicitud, Estado estado, String comentariosCliente, String notasInternas) {
+        this.cliente = cliente;
+        this.plan = plan;
+        this.fechaSolicitud = fechaSolicitud;
+        this.estado = estado;
+        this.comentariosCliente = comentariosCliente;
+        this.notasInternas = notasInternas;
+    }
+
 }

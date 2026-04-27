@@ -9,7 +9,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,57 +28,52 @@ public class ClienteDAO {
         try {
             preparedStatement = connection.prepareStatement(query);
             resultSet = preparedStatement.executeQuery();
-
             while (resultSet.next()) {
-                String nombre = resultSet.getString(SchemaDB.C_NOMBRE_CLIENTE);
-                String apellidos = resultSet.getString(SchemaDB.C_APELLIDOS_CLIENTE);
-                String email = resultSet.getString(SchemaDB.C_EMAIL_CLIENTE);
-                String telefono = resultSet.getString(SchemaDB.C_TELEFONO);
-                Nivel nivel = Nivel.fromDb(resultSet.getString(SchemaDB.C_NIVEL));
-                String objetivo = resultSet.getString(SchemaDB.C_OBJETIVO_CLIENTE);
-                LocalDate fechaAlta = resultSet.getDate(SchemaDB.C_FECHA_ALTA).toLocalDate();
-
-                clientes.add(new Cliente(nombre, apellidos, email, telefono, nivel, objetivo, fechaAlta));
+                clientes.add(mapResultSetToCliente(resultSet));
             }
         } catch (SQLException e) {
-            System.out.println("Error en la SQL");
+            System.out.println("Error en la SQL: " + e.getMessage());
         }
-
         return clientes;
     }
 
     public Cliente findByEmail(String email) {
-        Cliente cliente = null;
-
-        String query = "SELECT * FROM " + SchemaDB.T_CLIENTES + " WHERE " + SchemaDB.C_EMAIL_CLIENTE +
-                "= '" + email + "'";
-
+        String query = "SELECT * FROM " + SchemaDB.T_CLIENTES +
+                " WHERE " + SchemaDB.C_EMAIL_CLIENTE + " = ?";
         try {
             preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, email);
             resultSet = preparedStatement.executeQuery();
-
-            while (resultSet.next()) {
-                String nombre = resultSet.getString(SchemaDB.C_NOMBRE_CLIENTE);
-                String apellidos = resultSet.getString(SchemaDB.C_APELLIDOS_CLIENTE);
-                String emailCliente = resultSet.getString(SchemaDB.C_EMAIL_CLIENTE);
-                String telefono = resultSet.getString(SchemaDB.C_TELEFONO);
-                Nivel nivel = Nivel.fromDb(resultSet.getString(SchemaDB.C_NIVEL));
-                String objetivo = resultSet.getString(SchemaDB.C_OBJETIVO_CLIENTE);
-                LocalDate fechaAlta = resultSet.getDate(SchemaDB.C_FECHA_ALTA).toLocalDate();
-
-                cliente = new Cliente(nombre, apellidos, emailCliente, telefono, nivel, objetivo, fechaAlta);
+            if (resultSet.next()) {
+                return mapResultSetToCliente(resultSet);
             }
         } catch (SQLException e) {
-            System.out.println("Error en la SQL");
+            System.out.println("Error en la SQL: " + e.getMessage());
         }
+        return null;
+    }
 
-        return cliente;
+    public Cliente findById(int idCliente) {
+        String query = "SELECT * FROM " + SchemaDB.T_CLIENTES +
+                " WHERE " + SchemaDB.C_ID_CLIENTE + " = ?";
+        try {
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, idCliente);
+            resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                return mapResultSetToCliente(resultSet);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error en la SQL: " + e.getMessage());
+        }
+        return null;
     }
 
     public boolean save(Cliente cliente) {
         String query = String.format("INSERT INTO %s (%s,%s,%s,%s,%s,%s,%s) VALUES (?,?,?,?,?,?,?)",
-                SchemaDB.T_CLIENTES, SchemaDB.C_NOMBRE_CLIENTE, SchemaDB.C_APELLIDOS_CLIENTE, SchemaDB.C_EMAIL_CLIENTE,
-                SchemaDB.C_TELEFONO, SchemaDB.C_NIVEL, SchemaDB.C_OBJETIVO_CLIENTE, SchemaDB.C_FECHA_ALTA);
+                SchemaDB.T_CLIENTES, SchemaDB.C_NOMBRE_CLIENTE, SchemaDB.C_APELLIDOS_CLIENTE,
+                SchemaDB.C_EMAIL_CLIENTE, SchemaDB.C_TELEFONO, SchemaDB.C_NIVEL,
+                SchemaDB.C_OBJETIVO_CLIENTE, SchemaDB.C_FECHA_ALTA);
 
         try {
             preparedStatement = connection.prepareStatement(query);
@@ -93,8 +87,7 @@ public class ClienteDAO {
             preparedStatement.execute();
             return true;
         } catch (SQLException e) {
-            System.out.println("Error en la SQL");
-            System.out.println(e.getMessage());
+            System.out.println("Error en la SQL: " + e.getMessage());
             return false;
         }
     }
@@ -102,16 +95,9 @@ public class ClienteDAO {
     public boolean update(Cliente cliente) {
         String query = String.format(
                 "UPDATE %s SET %s=?, %s=?, %s=?, %s=?, %s=?, %s=?, %s=? WHERE %s=?",
-                SchemaDB.T_CLIENTES,
-                SchemaDB.C_NOMBRE_CLIENTE,
-                SchemaDB.C_APELLIDOS_CLIENTE,
-                SchemaDB.C_EMAIL_CLIENTE,
-                SchemaDB.C_TELEFONO,
-                SchemaDB.C_NIVEL,
-                SchemaDB.C_OBJETIVO_CLIENTE,
-                SchemaDB.C_FECHA_ALTA,
-                SchemaDB.C_ID_CLIENTE
-        );
+                SchemaDB.T_CLIENTES, SchemaDB.C_NOMBRE_CLIENTE, SchemaDB.C_APELLIDOS_CLIENTE,
+                SchemaDB.C_EMAIL_CLIENTE, SchemaDB.C_TELEFONO, SchemaDB.C_NIVEL,
+                SchemaDB.C_OBJETIVO_CLIENTE, SchemaDB.C_FECHA_ALTA, SchemaDB.C_ID_CLIENTE);
 
         try {
             preparedStatement = connection.prepareStatement(query);
@@ -125,19 +111,15 @@ public class ClienteDAO {
             preparedStatement.setInt(8, cliente.getIdCliente());
             preparedStatement.executeUpdate();
             return true;
-
         } catch (SQLException e) {
-            System.out.println("Error en la SQL");
-            System.out.println(e.getMessage());
+            System.out.println("Error en la SQL: " + e.getMessage());
             return false;
         }
     }
 
     public boolean deleteById(int idCliente) {
         String query = String.format("DELETE FROM %s WHERE %s = ?",
-                SchemaDB.T_CLIENTES,
-                SchemaDB.C_ID_CLIENTE
-        );
+                SchemaDB.T_CLIENTES, SchemaDB.C_ID_CLIENTE);
 
         try {
             preparedStatement = connection.prepareStatement(query);
@@ -145,9 +127,21 @@ public class ClienteDAO {
             preparedStatement.execute();
             return true;
         } catch (SQLException e) {
-            System.out.println("Error en la SQL");
-            System.out.println(e.getMessage());
+            System.out.println("Error en la SQL: " + e.getMessage());
             return false;
         }
+    }
+
+    private Cliente mapResultSetToCliente(ResultSet rs) throws SQLException {
+        return new Cliente(
+                rs.getInt(SchemaDB.C_ID_CLIENTE),
+                rs.getString(SchemaDB.C_NOMBRE_CLIENTE),
+                rs.getString(SchemaDB.C_APELLIDOS_CLIENTE),
+                rs.getString(SchemaDB.C_EMAIL_CLIENTE),
+                rs.getString(SchemaDB.C_TELEFONO),
+                Nivel.fromDb(rs.getString(SchemaDB.C_NIVEL)),
+                rs.getString(SchemaDB.C_OBJETIVO_CLIENTE),
+                rs.getDate(SchemaDB.C_FECHA_ALTA).toLocalDate()
+        );
     }
 }

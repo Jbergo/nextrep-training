@@ -1,6 +1,7 @@
 package service;
 
 import dao.PlanDAO;
+import model.Nivel;
 import model.Plan;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public class PlanService {
         return planDao.findAll();
     }
 
-    public List<Plan> buscarPorNivel(String nivel) {
+    public List<Plan> buscarPorNivel(Nivel nivel) {
         return planDao.findByLevel(nivel);
     }
 }

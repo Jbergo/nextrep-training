@@ -17,6 +17,16 @@ public class ClienteService {
     }
 
     public Cliente buscarPorEmail(String email) {
+        if (email == null || email.isBlank()) {
+            System.out.println("El email no puede estar vacío");
+            return null;
+        }
+
+        if (!email.matches("^[\\w.-]+@[\\w.-]+\\.[a-zA-Z]{2,}$")) {
+            System.out.println("El formato del email no es válido");
+            return null;
+        }
+
         return clienteDao.findByEmail(email);
     }
 
@@ -28,7 +38,8 @@ public class ClienteService {
         return clienteDao.update(cliente);
     }
 
-    public boolean eliminarCliente(Cliente cliente) {
+    public boolean eliminarCliente(String correo) {
+        Cliente cliente = buscarPorEmail(correo);
         return clienteDao.deleteById(cliente.getIdCliente());
     }
 }

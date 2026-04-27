@@ -27,20 +27,37 @@ public class AdministradorDAO {
         try {
             preparedStatement = connection.prepareStatement(query);
             resultSet = preparedStatement.executeQuery();
-
             while (resultSet.next()) {
-                String nombre = resultSet.getString(SchemaDB.C_NOMBRE_ADMIN);
-                String apellidos = resultSet.getString(SchemaDB.C_APELLIDOS_ADMIN);
-                String email = resultSet.getString(SchemaDB.C_EMAIL_ADMIN);
-
-                admins.add(new Administrador(nombre, apellidos, email));
+                admins.add(mapResultSetToAdmin(resultSet));
             }
-
         } catch (SQLException e) {
-            System.out.println("Error en la SQL");
-            System.out.println(e.getMessage());
+            System.out.println("Error en la SQL: " + e.getMessage());
         }
-
         return admins;
+    }
+
+    public Administrador findById(int idAdmin) {
+        String query = "SELECT * FROM " + SchemaDB.T_ADMINISTRADOR +
+                " WHERE " + SchemaDB.C_ID_ADMIN + " = ?";
+        try {
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setInt(1, idAdmin);
+            resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                return mapResultSetToAdmin(resultSet);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error en la SQL: " + e.getMessage());
+        }
+        return null;
+    }
+
+    private Administrador mapResultSetToAdmin(ResultSet rs) throws SQLException {
+        return new Administrador(
+                rs.getInt(SchemaDB.C_ID_ADMIN),
+                rs.getString(SchemaDB.C_NOMBRE_ADMIN),
+                rs.getString(SchemaDB.C_APELLIDOS_ADMIN),
+                rs.getString(SchemaDB.C_EMAIL_ADMIN)
+        );
     }
 }
