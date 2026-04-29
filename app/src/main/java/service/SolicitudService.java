@@ -56,7 +56,7 @@ public class SolicitudService {
 
         Administrador admin = new AdministradorDAO().findById(1);
 
-        return solicitudDao.save(new Solicitud(cliente, plan, fecha, estado, comentarios, notasInternas));
+        return solicitudDao.save(new Solicitud(cliente, plan, admin, fecha, estado, comentarios, notasInternas));
     }
 
     public boolean modificarSolicitud(Solicitud solicitud) {

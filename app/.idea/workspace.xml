@@ -5,24 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1f1b7c36-debb-45be-a21d-b48bb66d3e25" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/ClienteMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/MainMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/PlanMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/view/SolicitudMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/AdministradorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/AdministradorDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/ClienteDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/ClienteDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/PlanDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/PlanDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/SolicitudDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/SolicitudDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Solicitud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Solicitud.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/SolicitudResumen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/SolicitudResumen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ClienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/PlanService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/PlanService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/SolicitudService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/SolicitudService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../assets/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../diagrams/uml.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/../diagrams/uml.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../web/.gitkeep" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
