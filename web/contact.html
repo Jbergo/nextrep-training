@@ -1,11 +1,200 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Proyecto Intermodular - Jorge Bermúdez. diseño, desarrollo
+        y documentación de un portal web completo, pensado para dar solución a una
+        necesidad real de una empresa simulada o de un contexto profesional creíble."
+    />
+    <meta name="keywords" content="HTML, CSS, JDBC, JAVA, MySQL" />
+    <meta name="author" content="Jorge Bermúdez Gómez" />
+    <meta name="creator" content="Prometeo - ThePower" />
+    <meta name="application-name" content="NextRep Training" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.png"
+      type="image/png"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/428f84c494.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>NextRep Training</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <!-- BARRA DE NAVEGACIÓN -->
+      <nav>
+        <div>
+          <img src="./assets/img/logo.png" alt="Logo de NextRep Training" />
+          <h1>NextRep Training</h1>
+        </div>
+
+        <ul>
+          <li>
+            <a href="index.html">Inicio</a>
+          </li>
+          <li>
+            <a href="services.html">Servicios</a>
+          </li>
+          <li>
+            <a href="aboutUs.html">Sobre Nosotros</a>
+          </li>
+          <li>
+            <a href="contact.html">Contacto</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- HERO -->
+      <section>
+        <h2>Contacto</h2>
+        <p>
+          ¿Tienes dudas? Completa el formulario y te ayudaremos a elegir el plan
+          más adecuado
+        </p>
+      </section>
+    </header>
+
+    <!-- FORMULARIO -->
+    <section>
+      <h3>Solicitud de información</h3>
+      <form>
+        <label for="nombre">Nombre *</label>
+        <input type="text" name="nombre" id="nombre" required />
+
+        <label for="apellidos">Apellidos *</label>
+        <input type="text" name="apellidos" id="apellidos" required />
+
+        <label for="email">Email *</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="correo@correo.es"
+          required
+        />
+
+        <label for="telefono">Teléfono</label>
+        <input type="tel" name="telefono" id="telefono">
+
+        <label for="servicio">Servicio a contratar *</label>
+        <select name="servicio" id="servicio" required>
+          <option value="" selected disabled>Selecciona un plan</option>
+          <option value="start">Plan Start</option>
+          <option value="fatLoss">Plan Fat Loss</option>
+          <option value="hypertrophy">Plan Hypertrophy</option>
+          <option value="crossTraining">Plan Cross Training</option>
+          <option value="personalizado">Asesoramiento Personalizado</option>
+        </select>
+
+        <label for="nivel">Experiencia / Nivel</label>
+        <select name="nivel" id="nivel">
+          <option value="" disabled selected>Selecciona tu nivel</option>
+          <option value="principiante">Principiante</option>
+          <option value="intermedio">Intermedio</option>
+          <option value="avanzado">Avanzado</option>
+        </select>
+
+        <label for="objetivo">Objetivo principal</label>
+        <select name="objetivo" id="objetivo">
+          <option value="" disabled selected>
+            Selecciona tu objetivo
+          </option>
+          <option value="habito">Crear hábito</option>
+          <option value="grasa">Perder grasa</option>
+          <option value="muscular">Ganar masa muscular</option>
+          <option value="rendimientos">Mejorar rendimiento</option>
+        </select>
+
+        <label for="text">Comentarios adicionales</label>
+        <textarea name="text" id="text"></textarea>
+
+        <button type="submit">Enviar solicitud</button>
+      </form>
+    </section>
+
+    <!-- INFO -->
+    <section>
+      <h3>Información de contacto</h3>
+      <article>
+        <i class="fa-solid fa-envelope"></i>
+        <div>
+          <h4>Email</h4>
+          <p>info@nextreptraining.com</p>
+        </div>
+      </article>
+
+      <article>
+        <i class="fa-solid fa-clock"></i>
+        <div>
+          <h4>Horario de atención</h4>
+          <p>Lunes a Viernes</p>
+          <p>9:00 - 18:00</p>
+        </div>
+      </article>
+
+      <article>
+        <i class="fa-solid fa-globe"></i>
+        <div>
+          <h4>Modalidad</h4>
+          <p>Servicio 100% online</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- AYUDA -->
+    <aside>
+      <h3>Te ayudamos a elegir</h3>
+      <p>
+        Te ayudaremos a elegir el plan más adecuado según tu nivel y objetivo.
+        Responderemos tu solicitud en un plazo máximo de 24-48 horas.
+      </p>
+    </aside>
+
+    <!-- FOOTER -->
+    <footer>
+      <div>
+        <article>
+          <img src="./assets/img/logo.png" alt="Logo de NextRep Training" />
+          <h4>NextRep Training</h4>
+          <p>Planes de entrenamiento online diseñados para tu progreso</p>
+        </article>
+
+        <article>
+          <h4>Enlaces</h4>
+          <ul>
+            <li>
+              <a href="index.html">Inicio</a>
+            </li>
+            <li>
+              <a href="services.html">Servicios</a>
+            </li>
+            <li>
+              <a href="aboutUs.html">Sobre Nosotros</a>
+            </li>
+            <li>
+              <a href="contact.html">Contacto</a>
+            </li>
+          </ul>
+        </article>
+
+        <article>
+          <h4>Proyecto Académico</h4>
+          <p>Proyecto Intermodular 1º DAW</p>
+          <p>Tecnologías: HTML5, CSS3, JS, Java, JDBC, MySQL</p>
+        </article>
+      </div>
+      <p>
+        &copy; 2026 NexRep Training. Proyecto académico con fines educativos.
+      </p>
+    </footer>
+  </body>
 </html>
