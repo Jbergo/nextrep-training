@@ -3,200 +3,188 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Proyecto Intermodular - Jorge Bermúdez. diseño, desarrollo
-        y documentación de un portal web completo, pensado para dar solución a una
-        necesidad real de una empresa simulada o de un contexto profesional creíble."
-    />
+    <meta name="description" content="NextRep Training — Sobre nosotros" />
     <meta name="keywords" content="HTML, CSS, JDBC, JAVA, MySQL" />
     <meta name="author" content="Jorge Bermúdez Gómez" />
     <meta name="creator" content="Prometeo - ThePower" />
     <meta name="application-name" content="NextRep Training" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="shortcut icon"
-      href="./assets/img/favicon.png"
-      type="image/png"
-    />
-
-    <script
-      src="https://kit.fontawesome.com/428f84c494.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <title>NextRep Training</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/png" />
+    <script src="https://kit.fontawesome.com/428f84c494.js" crossorigin="anonymous"></script>
+    <title>NextRep Training — Sobre Nosotros</title>
   </head>
   <body>
-    <!-- HEADER -->
+
+    <!-- NAVBAR -->
     <header>
-      <!-- BARRA DE NAVEGACIÓN -->
-      <nav>
-        <img src="./assets/img/logo.png" alt="Logo de NextRep Training" />
-
-        <ul>
-          <li>
-            <a href="index.html">Inicio</a>
-          </li>
-          <li>
-            <a href="services.html">Servicios</a>
-          </li>
-          <li>
-            <a href="aboutUs.html">Sobre Nosotros</a>
-          </li>
-          <li>
-            <a href="contact.html">Contacto</a>
-          </li>
-        </ul>
+      <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+          <a href="index.html">
+            <img class="navbar__logo" src="./assets/img/logo.png" alt="Logo NextRep Training" />
+          </a>
+          <button class="navbar__toggle" id="nav-toggle" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+          </button>
+          <ul class="navbar__menu" id="nav-menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="services.html">Servicios</a></li>
+            <li><a href="aboutUs.html" class="active">Sobre Nosotros</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </div>
       </nav>
-
-      <!-- HERO -->
-      <section>
-        <h1>Sobre nosotros</h1>
-        <p>
-          Convertimos objetivos difusos en planes concretos y fáciles de seguir
-        </p>
-      </section>
     </header>
 
-    <!-- QUIENES SOMOS -->
-    <section>
-      <div>
-        <h2>Quiénes somos</h2>
-        <p>
-          NextRep Training es una empresa de entrenamiento online dedicada a
-          ayudar a personas de todos los niveles a alcanzar sus objetivos
-          físicos mediante programas estructurados y progresivos.
-        </p>
-        <p>
-          Creemos que entrenar con un plan claro marca la diferencia entre
-          abandonar y conseguir resultados reales. Por eso diseñamos
-          programaciones adaptadas a cada nivel, con progresiones lógicas y
-          fáciles de seguir.
-        </p>
-        <p>
-          Nuestros planes combinan la efectividad de métodos probados con la
-          flexibilidad del formato online, para que puedas entrenar donde y
-          cuando quieras sin perder estructura ni resultados.
-        </p>
-      </div>
-      <img src="./assets/img/quienesSomos.png" alt="Nuestros coaches" />
-    </section>
+    <main>
+      <!-- PAGE HERO -->
+      <section class="page-hero" id="hero-about">
+        <div class="container">
+          <span class="section-tag">Quiénes somos</span>
+          <h1 class="page-hero__title">Sobre nosotros</h1>
+          <p class="page-hero__subtitle">Convertimos objetivos difusos en planes concretos y fáciles de seguir</p>
+        </div>
+      </section>
 
-    <!-- NUESTRA MISION -->
-    <section>
-      <h2>Nuestra Misión</h2>
-      <p>Convertir objetivos difusos en planes concretos y fáciles de seguir</p>
-      <div>
-        <article>
-          <i class="fa-solid fa-bullseye"></i>
-          <h3>Claridad</h3>
-          <p>
-            Rutinas claras y fáciles de seguir, sin complicaciones innecesarias
-          </p>
-        </article>
+      <!-- QUIENES SOMOS -->
+      <section id="quienes-somos">
+        <div class="container">
+          <div class="who__inner">
+            <div class="who__content">
+              <span class="section-tag">Nuestra historia</span>
+              <h2 class="who__title">Quiénes somos</h2>
+              <p class="who__text">
+                NextRep Training es una empresa de entrenamiento online dedicada a ayudar a personas de todos los niveles a alcanzar sus objetivos físicos mediante programas estructurados y progresivos.
+              </p>
+              <p class="who__text">
+                Creemos que entrenar con un plan claro marca la diferencia entre abandonar y conseguir resultados reales. Por eso diseñamos programaciones adaptadas a cada nivel, con progresiones lógicas y fáciles de seguir.
+              </p>
+              <p class="who__text">
+                Nuestros planes combinan la efectividad de métodos probados con la flexibilidad del formato online, para que puedas entrenar donde y cuando quieras sin perder estructura ni resultados.
+              </p>
+            </div>
+            <div class="who__image-wrap">
+              <img class="who__image" src="./assets/img/quienesSomos.png" alt="Equipo NextRep Training" />
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <article>
-          <i class="fa-solid fa-arrow-trend-up"></i>
-          <h3>Progresión</h3>
-          <p>Avance estructurado y medible para alcanzar tus objetivos</p>
-        </article>
+      <!-- MISIÓN -->
+      <section id="mision">
+        <div class="container">
+          <div class="mission__header">
+            <span class="section-tag">Lo que nos mueve</span>
+            <h2 class="mission__title">Nuestra Misión</h2>
+            <p class="mission__subtitle">Convertir objetivos difusos en planes concretos y fáciles de seguir</p>
+          </div>
 
-        <article>
-          <i class="fa-solid fa-bolt-lightning"></i>
-          <h3>Constancia</h3>
-          <p>Planes diseñados para crear hábitos sostenibles a largo plazo</p>
-        </article>
+          <div class="mission__grid">
+            <article class="mission-card">
+              <div class="mission-card__icon">
+                <i class="fa-solid fa-bullseye"></i>
+              </div>
+              <h3 class="mission-card__title">Claridad</h3>
+              <p class="mission-card__text">Rutinas claras y fáciles de seguir, sin complicaciones innecesarias.</p>
+            </article>
 
-        <article>
-          <i class="fa-solid fa-user-group"></i>
-          <h3>Adaptación</h3>
-          <p>Entrenamiento ajustado al nivel y necesidades de cada usuario</p>
-        </article>
-      </div>
-    </section>
+            <article class="mission-card">
+              <div class="mission-card__icon">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+              </div>
+              <h3 class="mission-card__title">Progresión</h3>
+              <p class="mission-card__text">Avance estructurado y medible para alcanzar tus objetivos.</p>
+            </article>
 
-    <!-- COMO TRABAJAMOS -->
-    <section>
-      <h2>Cómo Trabajamos</h2>
-      <div>
-        <article>
-          <i class="fa-solid fa-1"></i>
-          <h3>Elige tu objetivo</h3>
-          <p>
-            Define qué quieres conseguir: ganar músculo, perder grasa, mejorar
-            rendimiento o crear hábito
-          </p>
-        </article>
+            <article class="mission-card">
+              <div class="mission-card__icon">
+                <i class="fa-solid fa-bolt-lightning"></i>
+              </div>
+              <h3 class="mission-card__title">Constancia</h3>
+              <p class="mission-card__text">Planes diseñados para crear hábitos sostenibles a largo plazo.</p>
+            </article>
 
-        <article>
-          <i class="fa-solid fa-2"></i>
-          <h3>Selecciona tu plan</h3>
-          <p>
-            Escoge el plan de entrenamiento que mejor se adapte a tu nivel y
-            disponibilidad
-          </p>
-        </article>
+            <article class="mission-card">
+              <div class="mission-card__icon">
+                <i class="fa-solid fa-user-group"></i>
+              </div>
+              <h3 class="mission-card__title">Adaptación</h3>
+              <p class="mission-card__text">Entrenamiento ajustado al nivel y necesidades de cada usuario.</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-        <article>
-          <i class="fa-solid fa-3"></i>
-          <h3>Empieza a entrenar</h3>
-          <p>
-            Sigue tu plan estructurado semana a semana y alcanza tus metas con
-            constancia
-          </p>
-        </article>
-      </div>
-    </section>
+      <!-- CÓMO TRABAJAMOS -->
+      <section id="como-trabajamos">
+        <div class="container">
+          <div class="steps__header">
+            <span class="section-tag">El proceso</span>
+            <h2 class="steps__title">Cómo Trabajamos</h2>
+          </div>
 
-    <!-- ¿LISTO PARA EMPEZAR? -->
-    <section>
-      <h2>¿Listo para empezar?</h2>
-      <p>
-        Descubre cómo NextRep Training puede ayudarte a alvanzar tus objetivos
-      </p>
-      <div>
-        <a href="services.html">Ver planes</a>
-        <a href="contact.html">Contactar</a>
-      </div>
-    </section>
+          <div class="steps__grid">
+            <article class="step-card">
+              <div class="step-card__number">1</div>
+              <h3 class="step-card__title">Elige tu objetivo</h3>
+              <p class="step-card__text">Define qué quieres conseguir: ganar músculo, perder grasa, mejorar rendimiento o crear hábito.</p>
+            </article>
+
+            <article class="step-card">
+              <div class="step-card__number">2</div>
+              <h3 class="step-card__title">Selecciona tu plan</h3>
+              <p class="step-card__text">Escoge el plan de entrenamiento que mejor se adapte a tu nivel y disponibilidad.</p>
+            </article>
+
+            <article class="step-card">
+              <div class="step-card__number">3</div>
+              <h3 class="step-card__title">Empieza a entrenar</h3>
+              <p class="step-card__text">Sigue tu plan estructurado semana a semana y alcanza tus metas con constancia.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section" id="cta-about">
+        <div class="container">
+          <h2 class="cta-section__title">¿Listo para empezar?</h2>
+          <p class="cta-section__subtitle">Descubre cómo NextRep Training puede ayudarte a alcanzar tus objetivos</p>
+          <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+            <a href="services.html" class="btn btn-primary">Ver planes</a>
+            <a href="contact.html" class="btn btn-outline">Contactar</a>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- FOOTER -->
-    <footer>
-      <div>
-        <article>
-          <img src="./assets/img/logo.png" alt="Logo de NextRep Training" />
-          <h3>NextRep Training</h3>
-          <p>Planes de entrenamiento online diseñados para tu progreso</p>
-        </article>
-
-        <article>
-          <h3>Enlaces</h3>
-          <ul>
-            <li>
-              <a href="index.html">Inicio</a>
-            </li>
-            <li>
-              <a href="services.html">Servicios</a>
-            </li>
-            <li>
-              <a href="aboutUs.html">Sobre Nosotros</a>
-            </li>
-            <li>
-              <a href="contact.html">Contacto</a>
-            </li>
-          </ul>
-        </article>
-
-        <article>
-          <h3>Proyecto Académico</h3>
-          <p>Proyecto Intermodular 1º DAW</p>
-          <p>Tecnologías: HTML5, CSS3, JS, Java, JDBC, MySQL</p>
-        </article>
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <img class="footer__logo" src="./assets/img/logo.png" alt="Logo NextRep Training" />
+            <p class="footer__brand-title">NextRep Training</p>
+            <p class="footer__brand-text">Planes de entrenamiento online diseñados para tu progreso real y constante.</p>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">Navegación</p>
+            <ul class="footer__links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="services.html">Servicios</a></li>
+              <li><a href="aboutUs.html">Sobre Nosotros</a></li>
+              <li><a href="contact.html">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">Proyecto Académico</p>
+            <p class="footer__tech-text">Proyecto Intermodular 1º DAW<br>Tecnologías: HTML5, CSS3, JS, Java, JDBC, MySQL</p>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copyright">&copy; 2026 NextRep Training. Proyecto académico con fines educativos.</p>
+        </div>
       </div>
-      <p>
-        &copy; 2026 NexRep Training. Proyecto académico con fines educativos.
-      </p>
     </footer>
+      <script src="main.js"></script>
   </body>
 </html>

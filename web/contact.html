@@ -3,193 +3,203 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Proyecto Intermodular - Jorge Bermúdez. diseño, desarrollo
-        y documentación de un portal web completo, pensado para dar solución a una
-        necesidad real de una empresa simulada o de un contexto profesional creíble."
-    />
+    <meta name="description" content="NextRep Training — Contacto" />
     <meta name="keywords" content="HTML, CSS, JDBC, JAVA, MySQL" />
     <meta name="author" content="Jorge Bermúdez Gómez" />
     <meta name="creator" content="Prometeo - ThePower" />
     <meta name="application-name" content="NextRep Training" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="shortcut icon"
-      href="./assets/img/favicon.png"
-      type="image/png"
-    />
-
-    <script
-      src="https://kit.fontawesome.com/428f84c494.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <title>NextRep Training</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/png" />
+    <script src="https://kit.fontawesome.com/428f84c494.js" crossorigin="anonymous"></script>
+    <title>NextRep Training — Contacto</title>
   </head>
   <body>
-    <!-- HEADER -->
+
+    <!-- NAVBAR -->
     <header>
-      <!-- BARRA DE NAVEGACIÓN -->
-      <nav>
-        <img src="./assets/img/logo.png" alt="Logo de NextRep Training" />
-
-        <ul>
-          <li>
-            <a href="index.html">Inicio</a>
-          </li>
-          <li>
-            <a href="services.html">Servicios</a>
-          </li>
-          <li>
-            <a href="aboutUs.html">Sobre Nosotros</a>
-          </li>
-          <li>
-            <a href="contact.html">Contacto</a>
-          </li>
-        </ul>
+      <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+          <a href="index.html">
+            <img class="navbar__logo" src="./assets/img/logo.png" alt="Logo NextRep Training" />
+          </a>
+          <button class="navbar__toggle" id="nav-toggle" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+          </button>
+          <ul class="navbar__menu" id="nav-menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="services.html">Servicios</a></li>
+            <li><a href="aboutUs.html">Sobre Nosotros</a></li>
+            <li><a href="contact.html" class="active">Contacto</a></li>
+          </ul>
+        </div>
       </nav>
-
-      <!-- HERO -->
-      <section>
-        <h1>Contacto</h1>
-        <p>
-          ¿Tienes dudas? Completa el formulario y te ayudaremos a elegir el plan
-          más adecuado
-        </p>
-      </section>
     </header>
 
-    <!-- FORMULARIO -->
-    <section>
-      <h2>Solicitud de información</h2>
-      <form>
-        <label for="nombre">Nombre *</label>
-        <input type="text" name="nombre" id="nombre" required />
-
-        <label for="apellidos">Apellidos *</label>
-        <input type="text" name="apellidos" id="apellidos" required />
-
-        <label for="email">Email *</label>
-        <input
-          type="email"
-          name="email"
-          id="email"
-          placeholder="correo@correo.es"
-          required
-        />
-
-        <label for="telefono">Teléfono</label>
-        <input type="tel" name="telefono" id="telefono" />
-
-        <label for="servicio">Servicio a contratar *</label>
-        <select name="servicio" id="servicio" required>
-          <option value="" selected disabled>Selecciona un plan</option>
-          <option value="start">Plan Start</option>
-          <option value="fatLoss">Plan Fat Loss</option>
-          <option value="hypertrophy">Plan Hypertrophy</option>
-          <option value="crossTraining">Plan Cross Training</option>
-          <option value="personalizado">Asesoramiento Personalizado</option>
-        </select>
-
-        <label for="nivel">Experiencia / Nivel</label>
-        <select name="nivel" id="nivel">
-          <option value="" disabled selected>Selecciona tu nivel</option>
-          <option value="principiante">Principiante</option>
-          <option value="intermedio">Intermedio</option>
-          <option value="avanzado">Avanzado</option>
-        </select>
-
-        <label for="objetivo">Objetivo principal</label>
-        <select name="objetivo" id="objetivo">
-          <option value="" disabled selected>Selecciona tu objetivo</option>
-          <option value="habito">Crear hábito</option>
-          <option value="grasa">Perder grasa</option>
-          <option value="muscular">Ganar masa muscular</option>
-          <option value="rendimientos">Mejorar rendimiento</option>
-        </select>
-
-        <label for="text">Comentarios adicionales</label>
-        <textarea name="text" id="text"></textarea>
-
-        <button type="submit">Enviar solicitud</button>
-      </form>
-    </section>
-
-    <!-- INFO -->
-    <section>
-      <h2>Información de contacto</h2>
-      <article>
-        <i class="fa-solid fa-envelope"></i>
-        <div>
-          <h4>Email</h4>
-          <p>info@nextreptraining.com</p>
+    <main>
+      <!-- PAGE HERO -->
+      <section class="page-hero" id="hero-contact">
+        <div class="container">
+          <span class="section-tag">Hablemos</span>
+          <h1 class="page-hero__title">Contacto</h1>
+          <p class="page-hero__subtitle">¿Tienes dudas? Completa el formulario y te ayudaremos a elegir el plan más adecuado</p>
         </div>
-      </article>
+      </section>
 
-      <article>
-        <i class="fa-solid fa-clock"></i>
-        <div>
-          <h3>Horario de atención</h3>
-          <p>Lunes a Viernes</p>
-          <p>9:00 - 18:00</p>
+      <!-- FORMULARIO + INFO -->
+      <section id="contacto">
+        <div class="container">
+          <div class="contact__inner">
+
+            <!-- Formulario -->
+            <div class="contact-form" id="form-solicitud">
+              <h2 class="contact-form__title">Solicitud de información</h2>
+
+              <form id="contact-form" novalidate>
+                <div class="form__row">
+                  <div class="form__group">
+                    <label class="form__label" for="nombre">Nombre *</label>
+                    <input class="form__input" type="text" name="nombre" id="nombre" placeholder="Tu nombre" required />
+                  </div>
+                  <div class="form__group">
+                    <label class="form__label" for="apellidos">Apellidos *</label>
+                    <input class="form__input" type="text" name="apellidos" id="apellidos" placeholder="Tus apellidos" required />
+                  </div>
+                </div>
+
+                <div class="form__row">
+                  <div class="form__group">
+                    <label class="form__label" for="email">Email *</label>
+                    <input class="form__input" type="email" name="email" id="email" placeholder="correo@correo.es" required />
+                  </div>
+                  <div class="form__group">
+                    <label class="form__label" for="telefono">Teléfono</label>
+                    <input class="form__input" type="tel" name="telefono" id="telefono" placeholder="+34 600 000 000" />
+                  </div>
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label" for="servicio">Servicio a contratar *</label>
+                  <select class="form__select" name="servicio" id="servicio" required>
+                    <option value="" selected disabled>Selecciona un plan</option>
+                    <option value="start">Plan Start</option>
+                    <option value="fatLoss">Plan Fat Loss</option>
+                    <option value="hypertrophy">Plan Hypertrophy</option>
+                    <option value="crossTraining">Plan Cross Training</option>
+                    <option value="personalizado">Asesoramiento Personalizado</option>
+                  </select>
+                </div>
+
+                <div class="form__row">
+                  <div class="form__group">
+                    <label class="form__label" for="nivel">Experiencia / Nivel</label>
+                    <select class="form__select" name="nivel" id="nivel">
+                      <option value="" disabled selected>Selecciona tu nivel</option>
+                      <option value="principiante">Principiante</option>
+                      <option value="intermedio">Intermedio</option>
+                      <option value="avanzado">Avanzado</option>
+                    </select>
+                  </div>
+                  <div class="form__group">
+                    <label class="form__label" for="objetivo">Objetivo principal</label>
+                    <select class="form__select" name="objetivo" id="objetivo">
+                      <option value="" disabled selected>Selecciona tu objetivo</option>
+                      <option value="habito">Crear hábito</option>
+                      <option value="grasa">Perder grasa</option>
+                      <option value="muscular">Ganar masa muscular</option>
+                      <option value="rendimiento">Mejorar rendimiento</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label" for="comentarios">Comentarios adicionales</label>
+                  <textarea class="form__textarea" name="comentarios" id="comentarios" placeholder="Cuéntanos más sobre tu situación o dudas..."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary form__submit">
+                  <i class="fa-solid fa-paper-plane"></i> Enviar solicitud
+                </button>
+              </form>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="contact-sidebar" id="contact-sidebar">
+
+              <div class="contact-info" id="contact-info">
+                <h3 class="contact-info__title">Información de contacto</h3>
+
+                <div class="contact-info__item">
+                  <div class="contact-info__icon">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div>
+                    <p class="contact-info__label">Email</p>
+                    <p class="contact-info__value">info@nextreptraining.com</p>
+                  </div>
+                </div>
+
+                <div class="contact-info__item">
+                  <div class="contact-info__icon">
+                    <i class="fa-solid fa-clock"></i>
+                  </div>
+                  <div>
+                    <p class="contact-info__label">Horario de atención</p>
+                    <p class="contact-info__value">Lunes a Viernes · 9:00 – 18:00</p>
+                  </div>
+                </div>
+
+                <div class="contact-info__item">
+                  <div class="contact-info__icon">
+                    <i class="fa-solid fa-globe"></i>
+                  </div>
+                  <div>
+                    <p class="contact-info__label">Modalidad</p>
+                    <p class="contact-info__value">Servicio 100% online</p>
+                  </div>
+                </div>
+              </div>
+
+              <aside class="contact-aside" id="contact-help">
+                <h3 class="contact-aside__title">Te ayudamos a elegir</h3>
+                <p class="contact-aside__text">
+                  Te ayudaremos a elegir el plan más adecuado según tu nivel y objetivo. Responderemos tu solicitud en un plazo máximo de 24–48 horas.
+                </p>
+              </aside>
+
+            </div>
+          </div>
         </div>
-      </article>
-
-      <article>
-        <i class="fa-solid fa-globe"></i>
-        <div>
-          <h3>Modalidad</h3>
-          <p>Servicio 100% online</p>
-        </div>
-      </article>
-    </section>
-
-    <!-- AYUDA -->
-    <aside>
-      <h2>Te ayudamos a elegir</h2>
-      <p>
-        Te ayudaremos a elegir el plan más adecuado según tu nivel y objetivo.
-        Responderemos tu solicitud en un plazo máximo de 24-48 horas.
-      </p>
-    </aside>
+      </section>
+    </main>
 
     <!-- FOOTER -->
-    <footer>
-      <div>
-        <article>
-          <img src="./assets/img/logo.png" alt="Logo de NextRep Training" />
-          <h3>NextRep Training</h3>
-          <p>Planes de entrenamiento online diseñados para tu progreso</p>
-        </article>
-
-        <article>
-          <h3>Enlaces</h3>
-          <ul>
-            <li>
-              <a href="index.html">Inicio</a>
-            </li>
-            <li>
-              <a href="services.html">Servicios</a>
-            </li>
-            <li>
-              <a href="aboutUs.html">Sobre Nosotros</a>
-            </li>
-            <li>
-              <a href="contact.html">Contacto</a>
-            </li>
-          </ul>
-        </article>
-
-        <article>
-          <h3>Proyecto Académico</h3>
-          <p>Proyecto Intermodular 1º DAW</p>
-          <p>Tecnologías: HTML5, CSS3, JS, Java, JDBC, MySQL</p>
-        </article>
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <img class="footer__logo" src="./assets/img/logo.png" alt="Logo NextRep Training" />
+            <p class="footer__brand-title">NextRep Training</p>
+            <p class="footer__brand-text">Planes de entrenamiento online diseñados para tu progreso real y constante.</p>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">Navegación</p>
+            <ul class="footer__links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="services.html">Servicios</a></li>
+              <li><a href="aboutUs.html">Sobre Nosotros</a></li>
+              <li><a href="contact.html">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer__col">
+            <p class="footer__col-title">Proyecto Académico</p>
+            <p class="footer__tech-text">Proyecto Intermodular 1º DAW<br>Tecnologías: HTML5, CSS3, JS, Java, JDBC, MySQL</p>
+          </div>
+        </div>
+        <div class="footer__bottom">
+          <p class="footer__copyright">&copy; 2026 NextRep Training. Proyecto académico con fines educativos.</p>
+        </div>
       </div>
-      <p>
-        &copy; 2026 NexRep Training. Proyecto académico con fines educativos.
-      </p>
     </footer>
+      <script src="main.js"></script>
   </body>
 </html>

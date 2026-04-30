@@ -3,187 +3,205 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Proyecto Intermodular - Jorge Bermúdez. diseño, desarrollo
-        y documentación de un portal web completo, pensado para dar solución a una
-        necesidad real de una empresa simulada o de un contexto profesional creíble."
-    />
+    <meta name="description" content="NextRep Training — Planes de entrenamiento online adaptados a tu nivel" />
     <meta name="keywords" content="HTML, CSS, JDBC, JAVA, MySQL" />
     <meta name="author" content="Jorge Bermúdez Gómez" />
     <meta name="creator" content="Prometeo - ThePower" />
     <meta name="application-name" content="NextRep Training" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="shortcut icon"
-      href="./assets/img/favicon.png"
-      type="image/png"
-    />
-
-    <script
-      src="https://kit.fontawesome.com/428f84c494.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <title>NextRep Training</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/png" />
+    <script src="https://kit.fontawesome.com/428f84c494.js" crossorigin="anonymous"></script>
+    <title>NextRep Training — Inicio</title>
   </head>
   <body>
-    <!-- HEADER -->
+
+    <!-- NAVBAR -->
     <header>
-      <!-- BARRA DE NAVEGACIÓN -->
-      <nav>
-        <img src="./assets/img/logo.png" alt="Logo de NextRep Training" />
+      <nav class="navbar" id="navbar">
+        <div class="navbar__inner">
+          <a href="index.html">
+            <img class="navbar__logo" src="./assets/img/logo.png" alt="Logo NextRep Training" />
+          </a>
 
-        <ul>
-          <li>
-            <a href="index.html">Inicio</a>
-          </li>
-          <li>
-            <a href="services.html">Servicios</a>
-          </li>
-          <li>
-            <a href="aboutUs.html">Sobre Nosotros</a>
-          </li>
-          <li>
-            <a href="contact.html">Contacto</a>
-          </li>
-        </ul>
+          <button class="navbar__toggle" id="nav-toggle" aria-label="Abrir menú">
+            <span></span><span></span><span></span>
+          </button>
+
+          <ul class="navbar__menu" id="nav-menu">
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="services.html">Servicios</a></li>
+            <li><a href="aboutUs.html">Sobre Nosotros</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+          </ul>
+        </div>
       </nav>
+    </header>
 
+    <main>
       <!-- HERO -->
       <section id="hero-principal">
-        <div>
-          <h1>Entrena con un plan online adaptado a tu nivel</h1>
-          <p>
-            Programaciones de entrenamiento claras, progresivas y diseñadas para
-            ayudarte a mejorar tu rendimiento, tu físico y tu constancia.
-          </p>
+        <div class="hero__inner container">
+          <div class="hero__content">
+            <span class="hero__eyebrow">Entrenamiento Online</span>
+            <h1 class="hero__title">
+              Entrena con un plan<br>
+              <span>adaptado</span><br>
+              a tu nivel
+            </h1>
+            <p class="hero__description">
+              Programaciones de entrenamiento claras, progresivas y diseñadas para ayudarte a mejorar tu rendimiento, tu físico y tu constancia.
+            </p>
+            <div class="hero__actions">
+              <a href="services.html" class="btn btn-primary">
+                <i class="fa-solid fa-dumbbell"></i> Ver planes
+              </a>
+              <a href="contact.html" class="btn btn-outline">Solicitar información</a>
+            </div>
+          </div>
 
-          <div>
-            <a href="services.html">Ver planes</a>
-            <a href="contact.html">Solicitar información</a>
+          <div class="hero__image-wrap">
+            <img class="hero__image" src="./assets/img/hero.png" alt="Personas entrenando con NextRep Training" />
+          </div>
+        </div>
+      </section>
+
+      <!-- CARACTERÍSTICAS -->
+      <section id="features">
+        <div class="container">
+          <div class="features__header">
+            <span class="section-tag">Por qué elegirnos</span>
+            <h2 class="features__title">¿Por qué NextRep Training?</h2>
+            <p class="features__subtitle">Entrenamiento online con estructura, progresión y resultados reales</p>
+          </div>
+
+          <div class="features__grid">
+            <article class="feature-card">
+              <div class="feature-card__icon">
+                <i class="fa-solid fa-bullseye"></i>
+              </div>
+              <h3 class="feature-card__title">Planes según nivel</h3>
+              <p class="feature-card__text">Desde principiante hasta avanzado, con programas adaptados a cada etapa.</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-card__icon">
+                <i class="fa-solid fa-arrow-trend-up"></i>
+              </div>
+              <h3 class="feature-card__title">Entrenamiento estructurado</h3>
+              <p class="feature-card__text">Progresiones claras y efectivas para avanzar semana a semana.</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-card__icon">
+                <i class="fa-regular fa-circle-check"></i>
+              </div>
+              <h3 class="feature-card__title">Seguimiento claro</h3>
+              <p class="feature-card__text">Control de tu evolución con métricas y seguimiento del progreso.</p>
+            </article>
+
+            <article class="feature-card">
+              <div class="feature-card__icon">
+                <i class="fa-regular fa-calendar"></i>
+              </div>
+              <h3 class="feature-card__title">Formato online</h3>
+              <p class="feature-card__text">Entrena donde y cuando quieras sin perder estructura ni resultados.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PLANES -->
+      <section id="planes">
+        <div class="container">
+          <div class="plans__header">
+            <span class="section-tag">Nuestros planes</span>
+            <h2 class="plans__title">Planes de entrenamiento</h2>
+            <p class="plans__subtitle">Elige el plan que mejor se adapte a tu nivel y a tus objetivos</p>
+          </div>
+
+          <div class="plans__grid">
+            <article class="plan-card">
+              <span class="plan-card__badge">Iniciación</span>
+              <h3 class="plan-card__name">Plan Start</h3>
+              <p class="plan-card__level">Principiante</p>
+              <p class="plan-card__desc">Crear hábito y mejorar condición física general.</p>
+              <p class="plan-card__price">39,99 <span>€/mes</span></p>
+              <a href="services.html" class="btn btn-dark">Ver detalles</a>
+            </article>
+
+            <article class="plan-card">
+              <span class="plan-card__badge">Popular</span>
+              <h3 class="plan-card__name">Plan Fat Loss</h3>
+              <p class="plan-card__level">Principiante-Intermedio</p>
+              <p class="plan-card__desc">Pérdida de grasa y mejora de la condición física.</p>
+              <p class="plan-card__price">59,99 <span>€/mes</span></p>
+              <a href="services.html" class="btn btn-dark">Ver detalles</a>
+            </article>
+
+            <article class="plan-card">
+              <span class="plan-card__badge">Resultados</span>
+              <h3 class="plan-card__name">Plan Hypertrophy</h3>
+              <p class="plan-card__level">Intermedio</p>
+              <p class="plan-card__desc">Ganancia de masa muscular con periodización efectiva.</p>
+              <p class="plan-card__price">69,99 <span>€/mes</span></p>
+              <a href="services.html" class="btn btn-dark">Ver detalles</a>
+            </article>
+
+            <article class="plan-card">
+              <span class="plan-card__badge">Elite</span>
+              <h3 class="plan-card__name">Plan Cross Training</h3>
+              <p class="plan-card__level">Intermedio-Avanzado</p>
+              <p class="plan-card__desc">Rendimiento funcional de alto nivel.</p>
+              <p class="plan-card__price">89,99 <span>€/mes</span></p>
+              <a href="services.html" class="btn btn-dark">Ver detalles</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section" id="cta-inicio">
+        <div class="container">
+          <h2 class="cta-section__title">Empieza hoy con una planificación<br>hecha para ti</h2>
+          <p class="cta-section__subtitle">Únete a NextRep Training y da el siguiente paso en tu entrenamiento</p>
+          <a href="contact.html" class="btn btn-primary">
+            <i class="fa-solid fa-paper-plane"></i> Solicitar información
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+      <div class="container">
+        <div class="footer__grid">
+          <div class="footer__brand">
+            <img class="footer__logo" src="./assets/img/logo.png" alt="Logo NextRep Training" />
+            <p class="footer__brand-title">NextRep Training</p>
+            <p class="footer__brand-text">Planes de entrenamiento online diseñados para tu progreso real y constante.</p>
+          </div>
+
+          <div class="footer__col">
+            <p class="footer__col-title">Navegación</p>
+            <ul class="footer__links">
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="services.html">Servicios</a></li>
+              <li><a href="aboutUs.html">Sobre Nosotros</a></li>
+              <li><a href="contact.html">Contacto</a></li>
+            </ul>
+          </div>
+
+          <div class="footer__col">
+            <p class="footer__col-title">Proyecto Académico</p>
+            <p class="footer__tech-text">Proyecto Intermodular 1º DAW<br>Tecnologías: HTML5, CSS3, JS, Java, JDBC, MySQL</p>
           </div>
         </div>
 
-        <img src="./assets/img/hero.png" alt="Foto de presentación" />
-      </section>
-    </header>
-
-    <!-- CARACTERÍSTICAS -->
-    <section>
-      <h2>¿Por qué NextRep Training?</h2>
-      <p>Entrenamiento online con estructura, proresión y resultados reales</p>
-      <article>
-        <i class="fa-solid fa-bullseye"></i>
-        <h3>Planes según nivel</h3>
-        <p>Desde principiante hasta avanzado</p>
-      </article>
-
-      <article>
-        <i class="fa-solid fa-arrow-trend-up"></i>
-        <h3>Entrenamiento estructurado</h3>
-        <p>Progresiones claras y efectivas</p>
-      </article>
-
-      <article>
-        <i class="fa-regular fa-circle-check"></i>
-        <h3>Seguimiento claro</h3>
-        <p>Control de tu evolución</p>
-      </article>
-
-      <article>
-        <i class="fa-regular fa-calendar"></i>
-        <h3>Formato online</h3>
-        <p>Entrena donde y cuando quieras</p>
-      </article>
-    </section>
-
-    <!-- PLANES -->
-    <section>
-      <h2>Nuestros planes de entrenamiento</h2>
-      <p>Eligel el plan que mejor se adapte a tu nivel y a tus objetivos</p>
-      <div>
-        <article>
-          <span>Iniciación</span>
-          <h3>Plan Start</h3>
-          <p>Principiante</p>
-          <p>Crear hábito y mejorar condición física</p>
-          <p>39,99 €</p>
-          <a href="services.html">Ver detalles</a>
-        </article>
-
-        <article>
-          <span>Popular</span>
-          <h3>Plan Fat Loss</h3>
-          <p>Principiante-Intermedio</p>
-          <p>Pérdida de grasa y mejora física</p>
-          <p>59,99 €</p>
-          <a href="services.html">Ver detalles</a>
-        </article>
-
-        <article>
-          <span>Resultados</span>
-          <h3>Plan Hypertrophy</h3>
-          <p>Intermedio</p>
-          <p>Ganancia de masa muscular</p>
-          <p>69,99 €</p>
-          <a href="services.html">Ver detalles</a>
-        </article>
-
-        <article>
-          <span>Elite</span>
-          <h3>Plan Cross Training</h3>
-          <p>Intermedio-Avanzado</p>
-          <p>Rendimiento funcional</p>
-          <p>89,99 €</p>
-          <a href="services.html">Ver detalles</a>
-        </article>
+        <div class="footer__bottom">
+          <p class="footer__copyright">&copy; 2026 NextRep Training. Proyecto académico con fines educativos.</p>
+        </div>
       </div>
-    </section>
-
-    <!-- INFO -->
-    <section>
-      <h2>Empieza hoy con una planificación hecha para ti</h2>
-      <p>Únete a NextRep Training y da el siguiente paso en tu entrenamiento</p>
-      <a href="contact.html">Solicitar información</a>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <div>
-        <article>
-          <img src="./assets/img/logo.png" alt="Logo de NextRep Training" />
-          <h3>NextRep Training</h3>
-          <p>Planes de entrenamiento online diseñados para tu progreso</p>
-        </article>
-
-        <article>
-          <h3>Enlaces</h3>
-          <ul>
-            <li>
-              <a href="index.html">Inicio</a>
-            </li>
-            <li>
-              <a href="services.html">Servicios</a>
-            </li>
-            <li>
-              <a href="aboutUs.html">Sobre Nosotros</a>
-            </li>
-            <li>
-              <a href="contact.html">Contacto</a>
-            </li>
-          </ul>
-        </article>
-
-        <article>
-          <h3>Proyecto Académico</h3>
-          <p>Proyecto Intermodular 1º DAW</p>
-          <p>Tecnologías: HTML5, CSS3, JS, Java, JDBC, MySQL</p>
-        </article>
-      </div>
-      <p>
-        &copy; 2026 NexRep Training. Proyecto académico con fines educativos.
-      </p>
     </footer>
+      <script src="main.js"></script>
   </body>
 </html>
