@@ -46,7 +46,7 @@ create table
         id_plan int not null,
         id_admin int,
         fecha_solicitud date not null,
-        estado enum ('Pendiente', 'Aprobada', 'Cancelada') not null default 'pendiente',
+        estado enum ('Pendiente', 'Aprobada', 'Cancelada') not null default 'Pendiente',
         comentarios_cliente text,
         notas_internas text,
         constraint fk_solicitud_clientes foreign key (id_cliente) references clientes (id_cliente) on update cascade on delete restrict,
